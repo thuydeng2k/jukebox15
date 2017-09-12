@@ -17,4 +17,3 @@ services:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=efe6358aa3
-
