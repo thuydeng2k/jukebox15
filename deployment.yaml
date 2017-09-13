@@ -28,13 +28,13 @@ spec:
       containers:
       - name: web
         image: thuyngo2k/jukebox:$BUILD_NUMBER
-        env: 
-        -name: RAILS_ENV
-         value: production
-        -name: PGPASSWORD
-         valueFrom:
-           secretKeyRef:
-             name: topsecret
-             key: pgpassword
+        env:
+        - name: RAILS_ENV
+          value: production
+        - name: PGPASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: topsecret
+              key: pgpassword
         ports:
         - containerPort: 3333
