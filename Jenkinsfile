@@ -46,13 +46,12 @@ pipeline {
 '''
       }
     }
-    stage('deploy to k8s') {
+    stage('deply to k8s') {
       steps {
         sh '''
-          envsubst < deployment.yaml | kubectl apply -f -f
+          envsubst < deployment.yaml | kubectl apply -f -
 '''
       }
     }
-
   }
 }
