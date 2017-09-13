@@ -25,7 +25,7 @@ RUN bundle install
 
 ENV RAILS_SERVE_STATIC_FILES=true
 ENV SECRET_KEY_BASE "2c322e4da8c9357dd61b1e6c19c999ff2c866972654806838a1af65db827affc9ba3625dacbfb3783a3d38df78d1214d10240c8b3bb5f50660b3c448c266a249"
-RUN rails assets:clobber && rais assets:precompile
+RUN rails assets:clobber && rails assets:precompile
 
 EXPOSE 3333
 CMD ["rails", "server"]
